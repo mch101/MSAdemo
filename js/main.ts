@@ -197,6 +197,15 @@ function init() : void {
     initSC();
 }
 
+var myClientId = "d4c36b05ad813b4c4a57a9b0b501cc52";
+
+function initSC() : void {
+    // init SoundCloud
+    SC.initialize({
+        client_id: myClientId
+    });
+}
+
 function loadSong(currentMood : Mood) : void {
     var songSelected : Song = myPlaylist.getRandSong(currentMood.name); // gets a random song based on the moodd
     var track_url : string = songSelected.url; 
